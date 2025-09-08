@@ -1,0 +1,113 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Barra de navegación */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #8cd4ef;
+  padding: 10px 20px;
+}
+
+.navbar .logo {
+  color: rgb(234, 225, 134);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: rgb(230, 174, 174);
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #f39c12;
+}
+
+/* Botón menú responsivo */
+.menu-btn {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: rgba(95, 111, 53, 0.571);
+  cursor: pointer;
+}
+
+/* Formulario */
+.login-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #f2aee3;
+  border-radius: 8px;
+  background: #83bded;
+}
+
+.login-container h2 {
+  text-align: center;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-container label {
+  margin-top: 10px;
+}
+
+.login-container input {
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #a2e8c1;
+  border-radius: 4px;
+}
+
+.login-container button {
+  margin-top: 15px;
+  padding: 10px;
+  background: #333;
+  color: rgb(233, 177, 239);
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.login-container button:hover {
+  background: #f39c12;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #dae797;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}

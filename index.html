@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Responsiva</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Menú de navegación -->
+  <nav class="navbar">
+    <div class="logo">CodeSpace</div>
+    <ul class="nav-links">
+      <li><a href="#">Inicia Sesión</a></li>
+      <li><a href="#">Usuarios</a></li>
+      <li><a href="#login"></a></li>
+    </ul>
+    <button class="menu-btn">☰</button>
+  </nav>
+
+  <!-- Sección de inicio de sesión -->
+  <section id="login" class="login-container">
+    <h2>Inicio de Sesión</h2>
+    <form>
+      <label for="usuario">Usuario</label>
+      <input type="text" id="usuario" name="usuario" placeholder="Ingresa tu usuario" required>
+
+      <label for="password">Contraseña</label>
+      <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
+
+      <button type="submit">Iniciar</button>
+    </form>
+  </section>
+
+  <script>
+    // Script para menú responsivo
+    const menuBtn = document.querySelector('.menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
